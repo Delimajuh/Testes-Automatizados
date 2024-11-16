@@ -1,0 +1,35 @@
+name: Testes Automatizados
+
+on:
+  push:
+    branches:
+      - main  # Ou 'master' dependendo da sua configuração de branch
+  pull_request:
+    branches:
+      - main  # Ou 'master' dependendo da sua configuração de branch
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest  # A plataforma do GitHub Actions onde o código será executado
+
+    steps:
+      # 1. Check-out do código
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      # 2. Configuração do ambiente Python
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # Aqui você pode especificar a versão do Python que deseja usar
+
+      # 3. Instalar as dependências (se você usar pip ou outras dependências)
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  # Supondo que você tenha um arquivo requirements.txt
+
+      # 4. Rodar os testes
+      - name: Run tests
+        run: |
+          pytest  # Ou o comando que você usa para rodar seus testes
