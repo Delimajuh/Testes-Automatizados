@@ -3,15 +3,14 @@ name: Testes Automatizados
 on:
   push:
     branches:
-      - main  # Ou 'master' dependendo da sua configuração de branch
+      - master  
   pull_request:
     branches:
-      - main  # Ou 'master' dependendo da sua configuração de branch
+      - master
 
 jobs:
   run-tests:
-    runs-on: ubuntu-latest  # A plataforma do GitHub Actions onde o código será executado
-
+    runs-on: ubuntu-latest  
     steps:
       # 1. Check-out do código
       - name: Check out code
