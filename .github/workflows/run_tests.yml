@@ -30,4 +30,4 @@ jobs:
       # 4. Rodar os testes
       - name: Run tests
         run: |
-          pytest  # Ou o comando que você usa para rodar seus testes
+          pytest  
