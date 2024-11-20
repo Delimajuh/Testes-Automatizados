@@ -3,10 +3,10 @@ name: Testes Automatizados
 on:
   push:
     branches:
-      - main 
+      - master 
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   run-tests:
@@ -14,13 +14,13 @@ jobs:
     steps:
       # 1. Check-out do código
       - name: Check out code
-        uses: actions/checkout@v3  # Atualizado para v3
+        uses: actions/checkout@v3  
 
       # 2. Configuração do ambiente Python
       - name: Set up Python
-        uses: actions/setup-python@v4  # Atualizado para v4
+        uses: actions/setup-python@v4  
         with:
-          python-version: '3.13'  # Versão Python instalada
+          python-version: '3.13'  
 
       # 3. Instalar as dependências
       - name: Install dependencies
