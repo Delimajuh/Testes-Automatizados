@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.edge.service import Service
-from webdriver_manager.microsoft import EdgeDriverManager
+from webdriver_manager.core.utils import EdgeDriverManager
+
 
 # Função para inicializar o driver
 def init_driver():
