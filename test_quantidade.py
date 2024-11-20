@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 import time
 
 def init_driver():
-    service = Service('C:/Users/Juliana/Desktop/edgedriver_win64/msedgedriver.exe')
+    service = Service(executable_path="C:\\Users\\Juliana\\Desktop\\edgedriver_win64\\msedgedriver.exe")
     driver = webdriver.Edge(service=service)
     driver.set_page_load_timeout(60)
     return driver

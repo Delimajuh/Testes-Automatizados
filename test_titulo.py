@@ -5,7 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 def init_driver():
-    service = Service('C:/Users/Juliana/Desktop/edgedriver_win64/msedgedriver.exe')
+    service = Service(executable_path="C:\\Users\\Juliana\\Desktop\\edgedriver_win64\\msedgedriver.exe")
     driver = webdriver.Edge(service=service)
     return driver
 

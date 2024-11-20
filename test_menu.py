@@ -7,7 +7,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 # Inicializa o driver
 def init_driver():
-    service = Service(executable_path='C:/Users/Juliana/Desktop/edgedriver_win64/msedgedriver.exe')
+    service = Service(executable_path="C:\\Users\\Juliana\\Desktop\\edgedriver_win64\\msedgedriver.exe")
     driver = webdriver.Edge(service=service)
     driver.set_page_load_timeout(60)  # Aguarda até 60 segundos pelo carregamento
     return driver

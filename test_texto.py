@@ -3,7 +3,7 @@ from selenium.webdriver.edge.service import Service
 from selenium.webdriver.common.by import By
 
 def init_driver():
-    service = Service('C:/Users/Juliana/Desktop/edgedriver_win64/msedgedriver.exe')
+    service = Service(executable_path="C:\\Users\\Juliana\\Desktop\\edgedriver_win64\\msedgedriver.exe")
     driver = webdriver.Edge(service=service)
     return driver
 
