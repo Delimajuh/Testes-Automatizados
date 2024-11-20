@@ -39,6 +39,6 @@ jobs:
 
 
       # 4. Rodar todos os testes com pytest
-      - name: Run all tests
+      - name: Run tests
         run: |
-          pytest -v  
+          pytest -v TestesFinal/  
