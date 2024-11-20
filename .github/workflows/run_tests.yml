@@ -30,4 +30,18 @@ jobs:
       # 4. Rodar os testes
       - name: Run tests
         run: |
-          pytest  
+          python acessar.py
+          python adicionar.py
+          python carregamento.py
+          python carrinho.py
+          python categorias.py
+          python elemento.py
+          python footer.py
+          python menu.py
+          python pesquisa.py
+          python preco.py
+          python quantidade.py
+          python responsividade.py
+          python texto.py
+          python titulo.py
+          python url.py  
