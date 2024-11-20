@@ -31,4 +31,4 @@ jobs:
 
       # 5. Rodar os testes
       - name: Run tests
-        run: pytest -v TestesFinal/
+        run: pytest -v 
