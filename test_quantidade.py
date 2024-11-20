@@ -2,11 +2,12 @@ from selenium import webdriver
 from selenium.webdriver.edge.service import Service
 from selenium.webdriver.common.by import By
 import time
+from webdriver_manager.microsoft import EdgeDriverManager
 
+# Função para inicializar o driver
 def init_driver():
-    service = Service(executable_path="C:\\Users\\Juliana\\Desktop\\edgedriver_win64\\msedgedriver.exe")
+    service = Service(EdgeDriverManager().install())
     driver = webdriver.Edge(service=service)
-    driver.set_page_load_timeout(60)
     return driver
 
 def test_quantidade_carrinho():

@@ -4,12 +4,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
+from webdriver_manager.microsoft import EdgeDriverManager
 
-# Função para inicializar o driver do Edge
+# Função para inicializar o driver
 def init_driver():
-    service = Service(executable_path="C:\\Users\\Juliana\\Desktop\\edgedriver_win64\\msedgedriver.exe")
+    service = Service(EdgeDriverManager().install())
     driver = webdriver.Edge(service=service)
-    driver.set_page_load_timeout(60)  # Aguarda até 60 segundos para o carregamento da página
     return driver
 
 def test_tempo_carregamento():

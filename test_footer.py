@@ -3,10 +3,11 @@ from selenium.webdriver.edge.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.microsoft import EdgeDriverManager
 
+# Função para inicializar o driver
 def init_driver():
-    # Caminho para o msedgedriver.exe
-    service = Service(executable_path="C:\\Users\\Juliana\\Desktop\\edgedriver_win64\\msedgedriver.exe")
+    service = Service(EdgeDriverManager().install())
     driver = webdriver.Edge(service=service)
     return driver
 
