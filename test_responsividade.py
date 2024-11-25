@@ -3,11 +3,14 @@ from selenium.webdriver.edge.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from webdriver_manager.microsoft import EdgeDriverManager
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
 # Função para inicializar o driver
 def init_driver():
-    service = Service(EdgeDriverManager().install())
+    """
+    Inicializa o driver do Edge usando o WebDriver Manager.
+    """
+    service = Service(EdgeChromiumDriverManager().install())
     driver = webdriver.Edge(service=service)
     return driver
 # Função para testar a responsividade do site
